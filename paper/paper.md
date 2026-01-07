@@ -5,21 +5,56 @@ tags:
   - cheminformatics
   - constraint-based models
 authors:
-  - name: Sébastien Moretti
+  - name: Jesubukade Ajakaye
     affiliation: 1
-    orcid: 0000-0003-3947-488X
-    role: Writing – original draft
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-8966-4422
+    role: BioHacker
+  - name: Mihail Anton
     affiliation: 2
-    role: Conceptualization, Writing – review & editing
+    orcid: 0000-0002-7753-9042
+    role: BioHacker
+  - name: Iván Domenzain
+    affiliation: 3
+    orcid: 0000-0002-5322-2040
+    role: BioHacker
+  - name: Tanisha Malpani
+    affiliation: 4
+    orcid: 
+    role: BioHacker
+  - name: Sébastien Moretti
+    affiliation: 5
+    orcid: 0000-0003-3947-488X
+    role: BioHacker
+  - name: Rahuman Sheriff
+    affiliation: 6
+    orcid: 0000-0003-0705-9809
+    role: BioHacker
+  - name: Maria Suarez-Diez
+    affiliation: 7
+    orcid: 0000-0001-5845-146X
+    role: BioHacker
 affiliations:
-  - name: SIB Swiss Institute of Bioinformatics, Vital-IT group, Lausanne, CH
-    ror: 002n09z45
+  - name: Federal Polytechnic Ayede: Ayede, Ogbomosho, Oyo State, NG
+    ror: 03ye8kt44
     index: 1
   - name: ELIXIR Europe
     ror: 044rwnt51
     index: 2
+  - name: 
+    ror: 
+    index: 3
+  - name: University of Helsinki, Computational Systems Medicine, FI
+    ror: 040af2s02
+    index: 4
+  - name: SIB Swiss Institute of Bioinformatics, Vital-IT group, Lausanne, CH
+    ror: 002n09z45
+    index: 5
+  - name: EMBL's European Bioinformatics Institute, BioModels, UK
+    ror: 02catss52
+    index: 6
+  - name: Wageningen University & Research, Laboratory of Systems and Synthetic Biology, NL
+    ror: 04qw24q55
+    index: 7
 date: 7 November 2025
 cito-bibliography: paper.bib
 event: BH25EU
