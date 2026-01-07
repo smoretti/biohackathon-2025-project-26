@@ -34,7 +34,7 @@ authors:
     orcid: 0000-0001-5845-146X
     role: BioHacker
 affiliations:
-  - name: Federal Polytechnic Ayede: Ayede, Ogbomosho, Oyo State, NG
+  - name: Federal Polytechnic Ayede, Ayede, Ogbomosho, Oyo State, NG
     ror: 03ye8kt44
     index: 1
   - name: ELIXIR Europe
