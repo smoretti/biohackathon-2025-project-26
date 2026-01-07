@@ -19,7 +19,7 @@ authors:
     role: BioHacker
   - name: Tanisha Malpani
     affiliation: 4
-    orcid: 
+    orcid: ???
     role: BioHacker
   - name: Sébastien Moretti
     affiliation: 5
@@ -40,8 +40,8 @@ affiliations:
   - name: ELIXIR Europe
     ror: 044rwnt51
     index: 2
-  - name: 
-    ror: 
+  - name: ???
+    ror: ???
     index: 3
   - name: University of Helsinki, Computational Systems Medicine, FI
     ror: 040af2s02
@@ -66,7 +66,7 @@ group: Project 26
 git_url: https://github.com/biohackrxiv/publication-template
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: Sébastien Moretti \emph{et al.}
+authors_short: Jesubukade Ajakaye \emph{et al.}
 ---
 
 
