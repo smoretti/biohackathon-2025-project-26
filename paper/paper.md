@@ -83,7 +83,7 @@ biotechnology, microbiology and biomedicine. Constraint-based modeling provides 
 framework to analyze large-scale models and to associate genome potential and metabolic reactions.
 
 Currently, libraries to simulate these models are available in general-purpose languages such as
-Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/index.html)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2023), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
+Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/index.html)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
 (Sybil 2013, unmaintained). There are also methods for model development and curation in Matlab
 ([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2023) or Java (Merlin, KBase). However,
 currently there lacks an up-to-date R implementation of methods for model development and curation.
@@ -99,17 +99,106 @@ considering implementation of [FROG analysis](https://www.biorxiv.org/content/10
 Biology Community](https://elixir-europe.org/communities/systems-biology) for the wider community, the long-term maintenance burden is spread across a wider
 membership.
 
-Two weeks before the BioHackathon, we discovered a tool in R allowing the simulation of models,
-called cobrar (https://github.com/Waschina/cobrar). We have then decided to rely on the cobrar code
-base to expand it. We have started a collaboration with the main cobrar developer Silvio Waschina
-from the Kiel University, Germany.
+Two weeks before the BioHackathon, we discovered a new tool in R allowing the simulation of models,
+called cobrar (https://github.com/Waschina/cobrar). Which calls for an assessment of its current
+state and definition of new development areas.
 
 
 # Material and Methods
 
-The following is a brief introduction of the components, linked data sources and analysis
+The following is a brief introduction of the tasks, linked tools and analysis
 approaches we used.
 
+## Collectively define project goals
+
+The hacking team has defined collectively the project goals, for the short term (the BioHackathon
+week), and for the long term (after the BioHackathon).
+
+## Evaluate existing tools
+
+Already a number of tools exist: what are their utilities, status, advantages...
+
+Here is a short list:
+- https://github.com/Waschina/cobrar
+- https://bioconductor.org/packages/release/bioc/html/SBMLR.html
+- https://bioconductor.org/packages/release/bioc/html/rsbml.html
+- https://github.com/bacpop/SBMLtoOdin
+
+## Understanding functionality of cobrar
+
+[cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
+maintained. We have then decided to rely on the cobrar code base to expand it. We have started a
+collaboration with the main cobrar developer Silvio Waschina from the Kiel University, Germany.
+
+This task is to understand the functionality and capabilities of current cobrar (understand the
+functions that are included and evaluate how do they relate to COBRApy).
+
+And also to determine the minimal amount of additions needed to ensure basic functionality that
+serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
+
+## Understanding model structure in cobrar (R console and R studio)
+
+Get a full understanding of the information that is kept or discarded by cobrar (starting from
+SBML):
+- Which fields are stored?
+- Which fields are discarded?
+- Which fields are needed to be incorporated?
+- How are fields represented in cobrar (variable types)?
+
+## Streamlining operation of cobrar for windows users
+
+Try to reproduce what other developers have contributed in our own windows machines.
+
+Document our process for reproducing them and report any missing or custom steps.
+
+Try cross compilation using conda from linux to windows.
+
+Document instructions.
+
+## Exploring reference models in cobrar
+
+Try to load, simulate and manipulate highly used models (E. coli, yeast-GEM, Human-GEM) using
+cobrar (R console and R studio):
+- Human-GEM (v1.19.0)
+- yeast-GEM (v9.0.2)
+- E. coli GEM
+- Model of C. oleagionosus included
+
+Detect any issues, solve and document them.
+
+## Galaxy integration
+
+Discuss with Galaxy people present at the BioHackathon about how to integrate a R tool in Galaxy.
+
+## FROG implementation in cobrar
+
+Implement FBA, FVA, gene del and rxn del using cobrar.
+
+Get the results as omex file if possible for a FROG integration.
+
+
+## Test any changes / new models with GitHub actions
+
+We have tested the CODEX AI code generation tool, to create cobrar pull requests.
+
+Those pull requests cover cobrar unit function tests, implemented as GitHub actions.
+
+This task will evaluate those CODEX pull requests to see if they make sense, and how to correct
+and integrate them.
+
+## Gurobi solver in cobrar
+
+cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
+
+This task goal is to evaluate how to add a plugin for the Gurobi solver.
+
+## Incorporation in Biotools
+
+Discuss with the Biotools people present at the BioHackathon to integrate cobrar in Biotools.
+
+## Discussion about Bioconductor
+
+Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
 
 # Results
 
