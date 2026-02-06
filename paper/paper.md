@@ -145,30 +145,30 @@ SBML):
 - Which fields are needed to be incorporated?
 - How are fields represented in cobrar (variable types)?
 
-## Streamlining operation of cobrar for windows users
+## Streamlining operation of cobrar for Windows users
 
-Try to reproduce what other developers have contributed in our own windows machines.
+Try to reproduce what other developers have contributed in our own Windows machines.
 
 Document our process for reproducing them and report any missing or custom steps.
 
-Try cross compilation using conda from linux to windows.
+Try cross compilation using conda from Linux to Windows.
 
 Document instructions.
 
 ## Exploring reference models in cobrar
 
-Try to load, simulate and manipulate highly used models (E. coli, yeast-GEM, Human-GEM) using
+Try to load, simulate and manipulate highly used models (*E. coli*, yeast-GEM, Human-GEM) using
 cobrar (R console and R studio):
 - Human-GEM (v1.19.0)
 - yeast-GEM (v9.0.2)
-- E. coli GEM
-- Model of C. oleagionosus included
+- *E. coli* GEM
+- Model of *C. oleagionosus* included
 
 Detect any issues, solve and document them.
 
 ## Galaxy integration
 
-Discuss with Galaxy people present at the BioHackathon about how to integrate a R tool in Galaxy.
+Discuss with Galaxy people present at the BioHackathon about how to integrate an R tool in Galaxy.
 
 ## FROG implementation in cobrar
 
