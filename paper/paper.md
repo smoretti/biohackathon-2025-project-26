@@ -72,72 +72,58 @@ authors_short: Jesubukade Ajakaye \emph{et al.}
 
 # Introduction
 
-As part of the BioHackathon Europe 2025, we here report...
+As part of the BioHackathon Europe 2025, we here report on the progress of the hacking team
+preparing tools to develop constraint-based models in the R language for Statistical Computing
+for the Systems Biology community. This preliminary development relies on the adaptation of
+existing toolboxes.
 
-## Meeting information
+Constraint-based modeling is a framework to model reaction fluxes in genome-scale metabolic
+network models. Genome scale models have uses in fundamental and applied questions relevant to
+biotechnology, microbiology and biomedicine. Constraint-based modeling provides a scalable
+framework to analyze large-scale models and to associate genome potential and metabolic reactions.
 
-If you want to submit a preprint to BioHackrXiv, first check if your meeting is registered. You can find a list
-of meetings [here](https://index.biohackrxiv.org/meetings). If your meeting is missing, please contact your meeting
-organizers. The above list also provides information on the YAML fields with information about the meeting.
+Currently, libraries to simulate these models are available in general-purpose languages such as
+Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/index.html)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2023), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
+(Sybil 2013, unmaintained). There are also methods for model development and curation in Matlab
+([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2023) or Java (Merlin, KBase). However,
+currently there lacks an up-to-date R implementation of methods for model development and curation.
 
-# Formatting
+In this project, we proposed the (re)development of an R based framework for developing and
+simulating constraint-based models. We proposed to expand the Sybil library for model simulation
+with the functionalities for model reconstruction and analysis available in the widely used RAVEN
+toolbox in Matlab. The outcome will facilitate constraint based modelling to experimental scientists,
+thereby contributing to bridge the gap between data users and data generators. It will also be
+more FAIR by being usable with non-proprietary software, and align with software best practices as
+collected by the [ELIXIR Tools Platform](https://elixir-europe.org/platforms/tools). We will work towards increased reproducibility by also
+considering implementation of [FROG analysis](https://www.biorxiv.org/content/10.1101/2024.09.24.614797) in R. Moreover, as a tool developed by the [ELIXIR Systems
+Biology Community](https://elixir-europe.org/communities/systems-biology) for the wider community, the long-term maintenance burden is spread across a wider
+membership.
 
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
+Two weeks before the BioHackathon, we discovered a tool in R allowing the simulation of models,
+called cobrar (https://github.com/Waschina/cobrar). We have then decided to rely on the cobrar code
+base to expand it. We have started a collaboration with the main cobrar developer Silvio Waschina
+from the Kiel University, Germany.
 
-## Subsection level 2
 
-Please keep sections to a maximum of only two levels.
+# Material and Methods
 
-## Tables
+The following is a brief introduction of the components, linked data sources and analysis
+approaches we used.
 
-Tables can be added in the following way, though alternatives are possible:
 
-```markdown
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
+# Results
 
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-```
 
-This gives:
+# Discussion
 
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
 
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
+# Outlook
 
-## Figures
 
-A figure is added with:
+# Acknowledgements
 
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-```
 
-This gives:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-Figures can be scaled by adding the width or height to the Markdown like this:
-
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png){ width=50px }
-```
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
-
-# Citation Typing Ontology annotation
+# References
 
 You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
 Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
@@ -170,16 +156,3 @@ Possible CiTO typing annotation include:
 * updates
 * citation: generic citation
 
-
-# Results
-
-
-# Discussion
-
-...
-
-## Acknowledgements
-
-...
-
-## References
