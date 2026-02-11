@@ -332,7 +332,7 @@ approaches we used.
 
     After talking with Bioconductor people present at the BioHackathon, a Bioconductor looks complicated for Mac and Windows OS.
 
-    One point to keep in mind concerning portability to macos is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libsbml compiled for apple silicon macs and these would be used if we would like to see cobrar in bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
+    One point to keep in mind concerning portability to MacOS is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libSBML compiled for Apple Silicon Macs and these would be used if we would like to see **cobrar** in Bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
 
 
 # Discussion
