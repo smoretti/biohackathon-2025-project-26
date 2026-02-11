@@ -318,7 +318,7 @@ approaches we used.
 
     Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
-    We have evaluated the current CPLex linker to convert it to Gurobi: a wrapper mimicking the CPLex plugin, but using the Gurobi R package.
+    We have evaluated the current CPLex linker to convert it to Gurobi: for example, a wrapper mimicking the CPLex plugin, but using the Gurobi R package.
 
     Due to the lack of time, this task has been postponed.
 
@@ -337,17 +337,26 @@ approaches we used.
 
 # Discussion
 
+During the pre-sessions we had before the BioHackathon, it was quite clear that the initial idea of developping a tool for constraint-based models in R, based on Sybil, was outdated with the discovery of **cobrar**.
+**cobrar** looked to cover all our basic requirements, and the BioHackathon project has been shifted to a deeper **cobrar** evaluation and testing, and an extension of its code base.
+Silvio Waschina, from the Kiel University, Germany, joined remotely the project, even if too late to register, and issues, updates and reports were shared to work together.
+
+**cobrar** was evaluated and tested on different plateforms, i.e. OS and R environments. Some tests showed issues when model file was not found, or when the model does not contain an objective function. The identification of exchange reactions has been fixed, in sync with the expected result tests drafted by an AI tool. Now, GitHub actions test automatically any modifications of basic **cobrar** fucntions. The Windows installation has been deeply tested, and is now formally described in the **cobrar** documentation.
+
+**cobrar** has been registered in bio.tools, and is now integrated with FROG to ensure the reproducibility of Genome Scale Metabolic Models. The BioHackathon discussions opened the integration of **cobrar** in Galaxy in a near future, and a plan for a Gurobi solver plugin.
 
 
 # Outlook
 
-We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool because the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run.
-The hacking team is now engaged in a review writing and continue networking in the Systems Biology community.
+We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool because the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run. A wiki on the **cobrar** repository space should be deployed to share documents, ideas and feedbacks by the community.
+The hacking team is now engaged in a review writing and will continue to work together.
+
 
 # Acknowledgements
 
 This work was performed during the ELIXIR BioHackathon Europe 2025, organized by ELIXIR in November 2025.
 We thank all people we met during the BioHackathon, remotely or face to face, for fruitful discussions.
+
 
 # References
 
