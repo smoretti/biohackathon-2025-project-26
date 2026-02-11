@@ -337,11 +337,11 @@ approaches we used.
 
 # Discussion
 
-During the pre-sessions we had before the BioHackathon, it was quite clear that the initial idea of developping a tool for constraint-based models in R, based on Sybil, was outdated with the discovery of **cobrar**.
+During the pre-sessions we had before the BioHackathon, it was quite clear that the initial idea of developing a tool for constraint-based models in R, based on Sybil, was outdated with the discovery of **cobrar**.
 **cobrar** looked to cover all our basic requirements, and the BioHackathon project has been shifted to a deeper **cobrar** evaluation and testing, and an extension of its code base.
 Silvio Waschina, from the Kiel University, Germany, joined remotely the project, even if too late to register, and issues, updates and reports were shared to work together.
 
-**cobrar** was evaluated and tested on different plateforms, i.e. OS and R environments. Some tests showed issues when model file was not found, or when the model does not contain an objective function. The identification of exchange reactions has been fixed, in sync with the expected result tests drafted by an AI tool. Now, GitHub actions test automatically any modifications of basic **cobrar** fucntions. The Windows installation has been deeply tested, and is now formally described in the **cobrar** documentation.
+**cobrar** was evaluated and tested on different platforms, i.e. OS and R environments. Some tests showed issues when the model file was not found, or when the model does not contain an objective function. The identification of exchange reactions has been fixed, in sync with the expected result tests drafted by an AI tool. Now, GitHub actions test automatically any modifications of basic **cobrar** functions. The Windows installation has been deeply tested, and is now formally described in the **cobrar** documentation.
 
 **cobrar** has been registered in bio.tools, and is now integrated with FROG to ensure the reproducibility of Genome Scale Metabolic Models. The BioHackathon discussions opened the integration of **cobrar** in Galaxy in a near future, and a plan for a Gurobi solver plugin.
 
