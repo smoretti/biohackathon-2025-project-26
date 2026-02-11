@@ -111,18 +111,18 @@ approaches we used.
 
 1. Collectively define project goals
 
-The hacking team has defined collectively the project goals, for the short term (the BioHackathon
-week), and for the long term (after the BioHackathon).
+   The hacking team has defined collectively the project goals, for the short term (the BioHackathon
+   week), and for the long term (after the BioHackathon).
 
 2. Evaluate existing tools
 
-Already a number of tools exist: what are their utilities, status, advantages...
+   Already a number of tools exist: what are their utilities, status, advantages...
 
-Here is a short list:
-- https://github.com/Waschina/cobrar
-- https://bioconductor.org/packages/release/bioc/html/SBMLR.html
-- https://bioconductor.org/packages/release/bioc/html/rsbml.html
-- https://github.com/bacpop/SBMLtoOdin
+   Here is a short list:
+   - https://github.com/Waschina/cobrar
+   - https://bioconductor.org/packages/release/bioc/html/SBMLR.html
+   - https://bioconductor.org/packages/release/bioc/html/rsbml.html
+   - https://github.com/bacpop/SBMLtoOdin
 
 3. Understanding functionality of cobrar
 
