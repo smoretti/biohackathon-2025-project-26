@@ -184,17 +184,17 @@ approaches we used.
 
 10. Gurobi solver in cobrar
 
-   cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
+    cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
 
-   Evaluate how to add a plugin for the Gurobi solver.
+    Evaluate how to add a plugin for the Gurobi solver.
 
-11. Incorporation in Biotools
+11. Incorporation in bio.tools
 
-   Discuss with the Biotools people present at the BioHackathon to integrate cobrar in Biotools.
+    Discuss with the bio.tools people present at the BioHackathon to integrate cobrar in bio.tools.
 
 12. Discussion about Bioconductor
 
-   Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
+    Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
 
 
 # Results
@@ -238,7 +238,7 @@ approaches we used.
 
    Some people in the hacking team have tested available instructions to install and run **cobrar** on Windows.
 
-   **cobrar** is pure R code, but the solver part is not. It was tricky to link R, **cobrar** and the solver.
+   **cobrar** is pure R code, but the solver and libSBML parts are not. It was tricky to link R, **cobrar**, libSBML and the solver.
 
    The team succeeded and updated instructions were added in the **cobrar** repository.
 
@@ -255,13 +255,13 @@ approaches we used.
    - FBA says it optimizes successfully even if there is no objective function
    - *C. oleaginosus* model (included in the repository) is loaded and optimized successfully, but the reporting fails.
      Identification of Exchange reactions is based on the name "EX_" this model does not follow this convention.
-   - If model file is not found, the readSBMLmod makes R crash.
+   - If model file is not found, the `readSBMLmod` function makes R crash.
 
    Those issues were documented, reported and are now solved.
 
 7. Galaxy integration
 
-   A function that you wish to expose in Galaxy has certain limitations:
+   After talking with Galaxy people present at the BioHackathon, we learnt that a function that you wish to expose in Galaxy has certain limitations:
    - The function's arguments must include the names of its input and output files (function return values are ignored).
    - Any error conditions should be handled with stop with a useful/informative error message. The Galaxy user will see these messages if an error occurs.
    - Functions which take datasets as input should accept as arguments the filenames pointing to those datasets. The Galaxy user interface will allow the user to choose the dataset graphically.
@@ -275,16 +275,16 @@ approaches we used.
    (source: https://www.bioconductor.org/packages//2.11/bioc/vignettes/RGalaxy/inst/doc/RGalaxy-vignette.pdf)
 
    There are two options for implementation in Galaxy:
-   - An interactive tool in this context is perfectly possible to have an interactive RStudio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed cobrar.
-   - Integration as tools: check CobraXy as it incorporates cobrapy for galaxy.
+   - An interactive tool in this context is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed cobrar.
+   - Integration as tools: check CobraXy as it incorporates COBRApy for galaxy.
 
 8. FROG implementation in cobrar
 
    FROG analysis is a community-driven initiative for standardizing reproducibility assessments of constraint-based and genome-scale metabolic models.
 
-   Implementation of the FROG analysis would make it easier for users to submit their models to the [biomodels](https://biomodels.net/) repository.
+   Implementation of the FROG analysis would make it easier for users to submit their models to the [BioModels](https://biomodels.net/) repository.
 
-   FROG analysis has been implemented. It can be called either for a R model object `ModelOrg` or for a path pointing to an SBML file.
+   FROG analysis has been implemented. It can be called either for an R model object `ModelOrg` or for a path pointing to an SBML file.
 
    ```R
    library(cobrar)
@@ -299,24 +299,41 @@ approaches we used.
 
    Few things have to be considered for further improvements:
    - OMEX archive export is currently not implemented.
-   - The metadata.json is missing the field for the sha256 checksum. This is because the R function `utils::sha256sum` was introduced in R quite recently and it is not available for R versions < 4.5. Since we would like to make cobrar also available for the 'latest minus one' version of R, we decided to omit the sha256 checksum for now.
+   - The metadata.json is missing the field for the sha256 checksum. This is because the R function `utils::sha256sum` was introduced in R quite recently, and it is not available for R versions < 4.5. Since we would like to make cobrar also available for the 'latest minus one' version of R, we decided to omit the sha256 checksum for now.
    - The example in the function documentation is not perfect. A better example has to be found.
 
 9. Test any changes / new models with GitHub actions
 
-   
+   The CODEX AI code generation tool was evaluated to test expected results of **cobrar** functions. And generate automatically corresponding pull requests.
+
+   The CODEX AI code was quite good, but needed to be rechecked and extended to fully cover the functions. But this is a good start to draft tests.
+
+   Some tests have been fixed, mainly because toy and dead-end models were too simple.
+
+   Other tests fail because of possible **cobrar** issues.
+
+   All of them are now corrected and integrated in the **cobrar** distribution.
 
 10. Gurobi solver in cobrar
 
-   
+    Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
-11. Incorporation in Biotools
+    We have evaluated the current CPLex linker to convert it to Gurobi: a wrapper mimicking the CPLex plugin, but using the Gurobi R package.
 
-   
+    Due to the lack of time, this task has been postponed.
+
+11. Incorporation in bio.tools
+
+    After talking with bio.tools people present at the BioHackathon, we have added a **cobrar** entry in bio.tools.
+
+    Sylvio took back the ownership.
 
 12. Discussion about Bioconductor
 
-   
+    After talking with Bioconductor people present at the BioHackathon, a Bioconductor looks complicated for Mac and Windows OS.
+
+    One point to keep in mind concerning portability to macos is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libsbml compiled for apple silicon macs and these would be used if we would like to see cobrar in bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
+
 
 # Discussion
 
