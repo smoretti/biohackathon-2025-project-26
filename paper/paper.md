@@ -73,7 +73,7 @@ authors_short: Jesubukade Ajakaye \emph{et al.}
 # Introduction
 
 As part of the BioHackathon Europe 2025, we here report on the progress of the hacking team
-preparing tools to develop constraint-based models in the R language for Statistical Computing
+preparing tools to develop constraint-based models in R (the language for Statistical Computing)
 for the Systems Biology community. This preliminary development relies on the adaptation of
 existing toolboxes.
 
@@ -83,9 +83,9 @@ biotechnology, microbiology and biomedicine. Constraint-based modeling provides 
 framework to analyze large-scale models and to associate genome potential and metabolic reactions.
 
 Currently, libraries to simulate these models are available in general-purpose languages such as
-Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/index.html)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
+Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
 (Sybil 2013, unmaintained). There are also methods for model development and curation in Matlab
-([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2023) or Java (Merlin, KBase). However,
+([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2025) or Java (Merlin, KBase). However,
 currently there lacks an up-to-date R implementation of methods for model development and curation.
 
 In this project, we proposed the (re)development of an R based framework for developing and
@@ -95,12 +95,12 @@ toolbox in Matlab. The outcome will facilitate constraint based modelling to exp
 thereby contributing to bridge the gap between data users and data generators. It will also be
 more FAIR by being usable with non-proprietary software, and align with software best practices as
 collected by the [ELIXIR Tools Platform](https://elixir-europe.org/platforms/tools). We will work towards increased reproducibility by also
-considering implementation of [FROG analysis](https://www.biorxiv.org/content/10.1101/2024.09.24.614797) in R. Moreover, as a tool developed by the [ELIXIR Systems
+considering implementation of [FROG analysis](https://doi.org/10.1101/2024.09.24.614797) in R. Moreover, as a tool developed by the [ELIXIR Systems
 Biology Community](https://elixir-europe.org/communities/systems-biology) for the wider community, the long-term maintenance burden is spread across a wider
 membership.
 
 Two weeks before the BioHackathon, we discovered a new tool in R allowing the simulation of models,
-called cobrar (https://github.com/Waschina/cobrar). Which calls for an assessment of its current
+called **cobrar** (https://github.com/Waschina/cobrar). Which calls for an assessment of its current
 state and definition of new development areas.
 
 
@@ -109,12 +109,12 @@ state and definition of new development areas.
 The following is a brief introduction of the tasks, linked tools and analysis
 approaches we used.
 
-## Collectively define project goals
+1. Collectively define project goals
 
 The hacking team has defined collectively the project goals, for the short term (the BioHackathon
 week), and for the long term (after the BioHackathon).
 
-## Evaluate existing tools
+2. Evaluate existing tools
 
 Already a number of tools exist: what are their utilities, status, advantages...
 
@@ -124,7 +124,7 @@ Here is a short list:
 - https://bioconductor.org/packages/release/bioc/html/rsbml.html
 - https://github.com/bacpop/SBMLtoOdin
 
-## Understanding functionality of cobrar
+3. Understanding functionality of cobrar
 
 [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
 maintained. We have then decided to rely on the cobrar code base to expand it. We have started a
@@ -136,7 +136,7 @@ functions that are included and evaluate how do they relate to COBRApy).
 And also to determine the minimal amount of additions needed to ensure basic functionality that
 serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
 
-## Understanding model structure in cobrar (R console and R studio)
+4. Understanding model structure in cobrar (R console and R studio)
 
 Get a full understanding of the information that is kept or discarded by cobrar (starting from
 SBML):
@@ -145,7 +145,7 @@ SBML):
 - Which fields are needed to be incorporated?
 - How are fields represented in cobrar (variable types)?
 
-## Streamlining operation of cobrar for Windows users
+5. Streamlining operation of cobrar for Windows users
 
 Try to reproduce what other developers have contributed in our own Windows machines.
 
@@ -155,7 +155,7 @@ Try cross compilation using conda from Linux to Windows.
 
 Document instructions.
 
-## Exploring reference models in cobrar
+6. Exploring reference models in cobrar
 
 Try to load, simulate and manipulate highly used models (*E. coli*, yeast-GEM, Human-GEM) using
 cobrar (R console and R studio):
@@ -166,18 +166,17 @@ cobrar (R console and R studio):
 
 Detect any issues, solve and document them.
 
-## Galaxy integration
+7. Galaxy integration
 
 Discuss with Galaxy people present at the BioHackathon about how to integrate an R tool in Galaxy.
 
-## FROG implementation in cobrar
+8. FROG implementation in cobrar
 
 Implement FBA, FVA, gene del and rxn del using cobrar.
 
 Get the results as omex file if possible for a FROG integration.
 
-
-## Test any changes / new models with GitHub actions
+9. Test any changes / new models with GitHub actions
 
 We have tested the CODEX AI code generation tool, to create cobrar pull requests.
 
@@ -186,19 +185,20 @@ Those pull requests cover cobrar unit function tests, implemented as GitHub acti
 This task will evaluate those CODEX pull requests to see if they make sense, and how to correct
 and integrate them.
 
-## Gurobi solver in cobrar
+10. Gurobi solver in cobrar
 
 cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
 
 This task goal is to evaluate how to add a plugin for the Gurobi solver.
 
-## Incorporation in Biotools
+11. Incorporation in Biotools
 
 Discuss with the Biotools people present at the BioHackathon to integrate cobrar in Biotools.
 
-## Discussion about Bioconductor
+12. Discussion about Bioconductor
 
 Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
+
 
 # Results
 
