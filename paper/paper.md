@@ -125,8 +125,8 @@ approaches we used.
 
 3. Understand the functionalities of cobrar
 
-   This task is to understand the functionalities and capabilities of current cobrar (understand the
-   functions that are included and evaluate how do they relate to COBRApy).
+   This task is to understand the functionalities and capabilities of cobrar: understand the
+   functions that are included and evaluate how do they relate to COBRApy.
 
    And also to determine the minimal amount of additions needed to ensure basic functionality that
    serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
@@ -218,7 +218,7 @@ approaches we used.
 3. Understand the functionalities of cobrar
 
    This first evaluation of **cobrar** allowed us to spot some lacking features and errors:
-   - Exchange reactions functions not working well
+   - Exchange reactions functions did not work well
    - Export only to SBML. Additional JSON export would be handy (to combine with Escher or other visualizations)
 
    At that step, we forked the **cobrar** repository to work on branches and submit independent pull requests to Silvio.
@@ -229,16 +229,94 @@ approaches we used.
 
    Starting from SBML, the model structure has been evaluated in **cobrar**.
 
-   The model structure looks complete, and fullfills all our requirements, e.g. stoichiometry in biochemical reactions.
+   The model structure looks complete, and fulfills all our requirements, e.g. stoichiometry in biochemical reactions.
 
    On the long term, we wonder if an effort should be engaged to align/harmonize names of functions between different
    cobra toolboxes.
 
 5. Streamline operation of cobrar for Windows users
 
-   
+   Some people in the hacking team have tested available instructions to install and run **cobrar** on Windows.
+
+   **cobrar** is pure R code, but the solver part is not. It was tricky to link R, **cobrar** and the solver.
+
+   The team succeeded and updated instructions were added in the **cobrar** repository.
+
+   The cross compilation using conda, from Linux to Windows, failed. The conda channels look too different between Linux
+   and Windows to cross compile easily.
 
 6. Explore reference models in cobrar
+
+   The load of highly used models (*E. coli*, yeast-GEM, Human-GEM) of different size and complexity showed that
+   **cobrar** can deal with models very efficiently. For example, the Human-GEM model, one of the largest with 13000
+   reactions, was loaded in about 13 seconds.
+
+   While loading and testing models, some issues were found:
+   - FBA says it optimizes successfully even if there is no objective function
+   - *C. oleaginosus* model (included in the repository) is loaded and optimized successfully, but the reporting fails.
+     Identification of Exchange reactions is based on the name "EX_" this model does not follow this convention.
+   - If model file is not found, the readSBMLmod makes R crash.
+
+   Those issues were documented, reported and are now solved.
+
+7. Galaxy integration
+
+   A function that you wish to expose in Galaxy has certain limitations:
+   - The function's arguments must include the names of its input and output files (function return values are ignored).
+   - Any error conditions should be handled with stop with a useful/informative error message. The Galaxy user will see these messages if an error occurs.
+   - Functions which take datasets as input should accept as arguments the filenames pointing to those datasets. The Galaxy user interface will allow the user to choose the dataset graphically.
+   - Return values of functions are ignored. Function output should be written to one or more files, and the names of these files should be passed into the function as arguments.
+   - Functions should be documented with a manual page. Galaxy will use this manual page to fill in relevant sections of the Galaxy XML file. The following sections of the man page are required:
+      - alias
+      - title
+      - description
+      - arguments - each argument must be documented
+      - details
+   (source: https://www.bioconductor.org/packages//2.11/bioc/vignettes/RGalaxy/inst/doc/RGalaxy-vignette.pdf)
+
+   There are two options for implementation in Galaxy:
+   - An interactive tool in this context is perfectly possible to have an interactive RStudio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed cobrar.
+   - Integration as tools: check CobraXy as it incorporates cobrapy for galaxy.
+
+8. FROG implementation in cobrar
+
+   FROG analysis is a community-driven initiative for standardizing reproducibility assessments of constraint-based and genome-scale metabolic models.
+
+   Implementation of the FROG analysis would make it easier for users to submit their models to the [biomodels](https://biomodels.net/) repository.
+
+   FROG analysis has been implemented. It can be called either for a R model object `ModelOrg` or for a path pointing to an SBML file.
+
+   ```R
+   library(cobrar)
+
+   frog("iML1515.xml.gz") # for an SBML file
+
+   # or for a "ModelOrg" object
+
+   mod <- readSBMLmod("iML1515.xml.gz")
+   frog(mod)
+   ```
+
+   Few things have to be considered for further improvements:
+   - OMEX archive export is currently not implemented.
+   - The metadata.json is missing the field for the sha256 checksum. This is because the R function `utils::sha256sum` was introduced in R quite recently and it is not available for R versions < 4.5. Since we would like to make cobrar also available for the 'latest minus one' version of R, we decided to omit the sha256 checksum for now.
+   - The example in the function documentation is not perfect. A better example has to be found.
+
+9. Test any changes / new models with GitHub actions
+
+   
+
+10. Gurobi solver in cobrar
+
+   
+
+11. Incorporation in Biotools
+
+   
+
+12. Discussion about Bioconductor
+
+   
 
 # Discussion
 
