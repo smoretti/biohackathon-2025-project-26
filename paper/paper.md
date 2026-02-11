@@ -332,17 +332,22 @@ approaches we used.
 
     After talking with Bioconductor people present at the BioHackathon, a Bioconductor looks complicated for Mac and Windows OS.
 
-    One point to keep in mind concerning portability to MacOS is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libSBML compiled for Apple Silicon Macs and these would be used if we would like to see **cobrar** in Bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
+    One point to keep in mind concerning portability to macOS is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libSBML compiled for Apple Silicon Macs and these would be used if we would like to see **cobrar** in Bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
 
 
 # Discussion
 
 
+
 # Outlook
 
+We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool because the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run.
+The hacking team is now engaged in a review writing and continue networking in the Systems Biology community.
 
 # Acknowledgements
 
+This work was performed during the ELIXIR BioHackathon Europe 2025, organized by ELIXIR in November 2025.
+We thank all people we met during the BioHackathon, remotely or face to face, for fruitful discussions.
 
 # References
 
