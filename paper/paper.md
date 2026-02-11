@@ -126,78 +126,78 @@ approaches we used.
 
 3. Understanding functionality of cobrar
 
-[cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
-maintained. We have then decided to rely on the cobrar code base to expand it. We have started a
-collaboration with the main cobrar developer Silvio Waschina from the Kiel University, Germany.
+   [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
+   maintained. We have then decided to rely on the cobrar code base to expand it. We have started a
+   collaboration with the main cobrar developer Silvio Waschina from the Kiel University, Germany.
 
-This task is to understand the functionality and capabilities of current cobrar (understand the
-functions that are included and evaluate how do they relate to COBRApy).
+   This task is to understand the functionality and capabilities of current cobrar (understand the
+   functions that are included and evaluate how do they relate to COBRApy).
 
-And also to determine the minimal amount of additions needed to ensure basic functionality that
-serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
+   And also to determine the minimal amount of additions needed to ensure basic functionality that
+   serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
 
 4. Understanding model structure in cobrar (R console and R studio)
 
-Get a full understanding of the information that is kept or discarded by cobrar (starting from
-SBML):
-- Which fields are stored?
-- Which fields are discarded?
-- Which fields are needed to be incorporated?
-- How are fields represented in cobrar (variable types)?
+   Get a full understanding of the information that is kept or discarded by cobrar (starting from
+   SBML):
+   - Which fields are stored?
+   - Which fields are discarded?
+   - Which fields are needed to be incorporated?
+   - How are fields represented in cobrar (variable types)?
 
 5. Streamlining operation of cobrar for Windows users
 
-Try to reproduce what other developers have contributed in our own Windows machines.
+   Try to reproduce what other developers have contributed in our own Windows machines.
 
-Document our process for reproducing them and report any missing or custom steps.
+   Document our process for reproducing them and report any missing or custom steps.
 
-Try cross compilation using conda from Linux to Windows.
+   Try cross compilation using conda from Linux to Windows.
 
-Document instructions.
+   Document instructions.
 
 6. Exploring reference models in cobrar
 
-Try to load, simulate and manipulate highly used models (*E. coli*, yeast-GEM, Human-GEM) using
-cobrar (R console and R studio):
-- Human-GEM (v1.19.0)
-- yeast-GEM (v9.0.2)
-- *E. coli* GEM
-- Model of *C. oleagionosus* included
+   Try to load, simulate and manipulate highly used models (*E. coli*, yeast-GEM, Human-GEM) using
+   cobrar (R console and R studio):
+   - Human-GEM (v1.19.0)
+   - yeast-GEM (v9.0.2)
+   - *E. coli* GEM
+   - Model of *C. oleagionosus* included
 
-Detect any issues, solve and document them.
+   Detect any issues, solve and document them.
 
 7. Galaxy integration
 
-Discuss with Galaxy people present at the BioHackathon about how to integrate an R tool in Galaxy.
+   Discuss with Galaxy people present at the BioHackathon about how to integrate an R tool in Galaxy.
 
 8. FROG implementation in cobrar
 
-Implement FBA, FVA, gene del and rxn del using cobrar.
+   Implement FBA, FVA, gene del and rxn del using cobrar.
 
-Get the results as omex file if possible for a FROG integration.
+   Get the results as omex file if possible for a FROG integration.
 
 9. Test any changes / new models with GitHub actions
 
-We have tested the CODEX AI code generation tool, to create cobrar pull requests.
+   We have tested the CODEX AI code generation tool, to create cobrar pull requests.
 
-Those pull requests cover cobrar unit function tests, implemented as GitHub actions.
+   Those pull requests cover cobrar unit function tests, implemented as GitHub actions.
 
-This task will evaluate those CODEX pull requests to see if they make sense, and how to correct
-and integrate them.
+   This task will evaluate those CODEX pull requests to see if they make sense, and how to correct
+   and integrate them.
 
 10. Gurobi solver in cobrar
 
-cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
+   cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
 
-This task goal is to evaluate how to add a plugin for the Gurobi solver.
+   This task goal is to evaluate how to add a plugin for the Gurobi solver.
 
 11. Incorporation in Biotools
 
-Discuss with the Biotools people present at the BioHackathon to integrate cobrar in Biotools.
+   Discuss with the Biotools people present at the BioHackathon to integrate cobrar in Biotools.
 
 12. Discussion about Bioconductor
 
-Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
+   Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
 
 
 # Results
