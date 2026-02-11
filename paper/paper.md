@@ -111,8 +111,7 @@ approaches we used.
 
 1. Collectively define project goals
 
-   The hacking team has defined collectively the project goals, for the short term (the BioHackathon
-   week), and for the long term (after the BioHackathon).
+   Define short term (the BioHackathon week), and long term (after the BioHackathon) goals.
 
 2. Evaluate existing tools
 
@@ -125,10 +124,6 @@ approaches we used.
    - https://github.com/bacpop/SBMLtoOdin
 
 3. Understand the functionalities of cobrar
-
-   [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
-   maintained. We have then decided to rely on the cobrar code base, and to expand it. We have started
-   a collaboration with the main cobrar developer Silvio Waschina from the Kiel University, Germany.
 
    This task is to understand the functionalities and capabilities of current cobrar (understand the
    functions that are included and evaluate how do they relate to COBRApy).
@@ -204,7 +199,46 @@ approaches we used.
 
 # Results
 
+1. Collectively define project goals
 
+   The hacking team has collectively defined the project goals, for the short term (the BioHackathon week), and for
+   the long term (after the BioHackathon), integrating capabilities, availabilities, wills and choices of each member.
+
+2. Evaluate existing tools
+
+   Among the existing tools, some have very limited features (e.g. only load SBML files), some are not updated for a
+   while, and some are dedicated to ODE models and not genome scale models.
+
+   [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
+   maintained. We have then decided to rely on the cobrar code base, and to expand it. We have then started
+   a collaboration with the main cobrar developer, Silvio Waschina, from the Kiel University, Germany.
+
+   cobrar is a re-coding of the Sybil library for model simulation, as we planned to do at the start of the project.
+
+3. Understand the functionalities of cobrar
+
+   This first evaluation of **cobrar** allowed us to spot some lacking features and errors:
+   - Exchange reactions functions not working well
+   - Export only to SBML. Additional JSON export would be handy (to combine with Escher or other visualizations)
+
+   At that step, we forked the **cobrar** repository to work on branches and submit independent pull requests to Silvio.
+
+   Silvio acted on pull requests and issues opened on the main **cobrar** repository.
+
+4. Understand the model structure in cobrar
+
+   Starting from SBML, the model structure has been evaluated in **cobrar**.
+
+   The model structure looks complete, and fullfills all our requirements, e.g. stoichiometry in biochemical reactions.
+
+   On the long term, we wonder if an effort should be engaged to align/harmonize names of functions between different
+   cobra toolboxes.
+
+5. Streamline operation of cobrar for Windows users
+
+   
+
+6. Explore reference models in cobrar
 
 # Discussion
 
