@@ -181,7 +181,7 @@ approaches we used.
    Evaluate those CODEX pull requests to see if they make sense, and how to correct
    and integrate them.
 
-10. Plug the Gurobi solver in **cobrar**
+10. Plugin the Gurobi solver in **cobrar**
 
     **cobrar** uses the GLPK solver, and provide a plugin for the CPLex solver.
 
@@ -189,7 +189,7 @@ approaches we used.
 
 11. Register in bio.tools
 
-    Discuss with the bio.tools people present at the BioHackathon to integrate **cobrar** in bio.tools.
+    Discuss with the bio.tools people present at the BioHackathon to register **cobrar** in bio.tools.
 
 12. Integrate in Bioconductor
 
@@ -313,7 +313,7 @@ approaches we used.
 
    All of them are now corrected and integrated in the **cobrar** distribution.
 
-10. Plug the Gurobi solver in **cobrar**
+10. Plugin the Gurobi solver in **cobrar**
 
     Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
