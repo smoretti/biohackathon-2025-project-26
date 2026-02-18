@@ -326,7 +326,7 @@ approaches we used.
 
     After talking with bio.tools people present at the BioHackathon, we have added a **cobrar** entry in bio.tools.
 
-    Sylvio took back the ownership.
+    Silvio took back the ownership.
 
 12. Integrate in Bioconductor
 
@@ -339,7 +339,7 @@ approaches we used.
 
 # Discussion
 
-During the pre-sessions we had before the BioHackathon, it was quite clear that the initial idea of developing a tool for constraint-based models in R, based on Sybil, was outdated with the discovery of **cobrar**.
+During the pre-sessions we had before the BioHackathon, it was quite clear that the initial idea of developing a tool for constraint-based models in R, based on Sybil, was outdated with the discovery of [cobrar](https://github.com/Waschina/cobrar).
 **cobrar** looked to cover all our basic requirements, and the BioHackathon project has been shifted to a deeper **cobrar** evaluation and testing, and an extension of its code base.
 Silvio Waschina, from the Kiel University, Germany, joined remotely the project, even if too late to register, and issues, updates and reports were shared to work together.
 
