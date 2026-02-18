@@ -181,7 +181,7 @@ approaches we used.
    Evaluate those CODEX pull requests to see if they make sense, and how to correct
    and integrate them.
 
-10. Plugin the Gurobi solver in **cobrar**
+10. Plug-in the Gurobi solver in **cobrar**
 
     **cobrar** uses the GLPK solver, and provide a plugin for the CPLex solver.
 
@@ -313,7 +313,7 @@ approaches we used.
 
    All of them are now corrected and integrated in the **cobrar** distribution.
 
-10. Plugin the Gurobi solver in **cobrar**
+10. Plug-in the Gurobi solver in **cobrar**
 
     Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
