@@ -162,11 +162,11 @@ approaches we used.
 
    Detect any issues, solve and document them.
 
-7. Galaxy integration
+7. Integrate in Galaxy
 
    Discuss with Galaxy people present at the BioHackathon about how to integrate an (our) R tool in Galaxy.
 
-8. FROG implementation in **cobrar**
+8. Implement FROG in **cobrar**
 
    Implement FBA, FVA, gene del and rxn del using **cobrar**.
 
@@ -181,17 +181,17 @@ approaches we used.
    Evaluate those CODEX pull requests to see if they make sense, and how to correct
    and integrate them.
 
-10. Gurobi solver in **cobrar**
+10. Plug the Gurobi solver in **cobrar**
 
     **cobrar** uses the glpk solver, and provide a plugin for the CPLex solver.
 
     Evaluate how to add a plugin for the Gurobi solver.
 
-11. Incorporation in bio.tools
+11. Register in bio.tools
 
     Discuss with the bio.tools people present at the BioHackathon to integrate **cobrar** in bio.tools.
 
-12. Discussion about Bioconductor
+12. Integrate in Bioconductor
 
     Discuss with the Bioconductor people present at the BioHackathon to integrate **cobrar** in Bioconductor.
 
@@ -258,7 +258,7 @@ approaches we used.
 
    Those issues were documented, reported and are now solved.
 
-7. Galaxy integration
+7. Integrate in Galaxy
 
    After talking with Galaxy people present at the BioHackathon, we learnt that a function that you wish to expose in Galaxy has certain limitations:
    - The function's arguments must include the names of its input and output files (function return values are ignored).
@@ -277,7 +277,7 @@ approaches we used.
    - An interactive tool in this context is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed **cobrar**.
    - Integration as tools: check CobraXy as it incorporates COBRApy for galaxy.
 
-8. FROG implementation in **cobrar**
+8. Implement FROG in **cobrar**
 
    FROG analysis is a community-driven initiative for standardizing reproducibility assessments of constraint-based and genome-scale metabolic models.
 
@@ -313,7 +313,7 @@ approaches we used.
 
    All of them are now corrected and integrated in the **cobrar** distribution.
 
-10. Gurobi solver in **cobrar**
+10. Plug the Gurobi solver in **cobrar**
 
     Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
@@ -321,13 +321,13 @@ approaches we used.
 
     Due to the lack of time, this task has been postponed.
 
-11. Incorporation in bio.tools
+11. Register in bio.tools
 
     After talking with bio.tools people present at the BioHackathon, we have added a **cobrar** entry in bio.tools.
 
     Sylvio took back the ownership.
 
-12. Discussion about Bioconductor
+12. Integrate in Bioconductor
 
     After talking with Bioconductor people present at the BioHackathon, a Bioconductor looks complicated for Mac and Windows OS.
 
