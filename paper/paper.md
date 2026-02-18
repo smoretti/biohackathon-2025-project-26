@@ -158,7 +158,7 @@ approaches we used.
    - Human-GEM (v1.19.0)
    - yeast-GEM (v9.0.2)
    - *E. coli* GEM
-   - Model of *C. oleagionosus* included
+   - Model of *C. oleaginosus* included
 
    Detect any issues, solve and document them.
 
