@@ -63,7 +63,7 @@ biohackathon_url:   "https://biohackathon-europe.org/"
 biohackathon_location: "Berlin, Germany, 2025"
 group: Project 26
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
+git_url: https://github.com/elixir-europe/biohackathon-projects-2025/blob/main/26.md
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
 authors_short: Jesubukade Ajakaye \emph{et al.}
