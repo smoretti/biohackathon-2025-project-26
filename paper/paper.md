@@ -73,9 +73,8 @@ authors_short: Jesubukade Ajakaye \emph{et al.}
 # Introduction
 
 As part of the BioHackathon Europe 2025, we here report on the progress of the hacking team
-preparing tools to develop constraint-based models in R (the language for Statistical Computing)
-for the Systems Biology community. This preliminary development relies on the adaptation of
-existing toolboxes.
+preparing tools to develop constraint-based models in R for the Systems Biology community.
+This preliminary development relies on the adaptation of existing toolboxes.
 
 Constraint-based modeling is a framework to model reaction fluxes in genome-scale metabolic
 network models. Genome scale models have uses in fundamental and applied questions relevant to
@@ -123,24 +122,24 @@ approaches we used.
    - https://bioconductor.org/packages/release/bioc/html/rsbml.html
    - https://github.com/bacpop/SBMLtoOdin
 
-3. Understand the functionalities of cobrar
+3. Understand the functionalities of **cobrar**
 
-   This task is to understand the functionalities and capabilities of cobrar: understand the
+   This task is to understand the functionalities and capabilities of **cobrar**: understand the
    functions that are included and evaluate how do they relate to COBRApy.
 
    And also to determine the minimal amount of additions needed to ensure basic functionality that
    serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
 
-4. Understand the model structure in cobrar
+4. Understand the model structure in **cobrar**
 
-   Get a full understanding of the information that is kept or discarded by cobrar, starting from
+   Get a full understanding of the information that is kept or discarded by **cobrar**, starting from
    SBML, with R console and R studio:
    - Which fields are stored?
    - Which fields are discarded?
    - Which fields are needed to be incorporated?
-   - How are fields represented in cobrar (variable types)?
+   - How are fields represented in **cobrar** (variable types)?
 
-5. Streamline operation of cobrar for Windows users
+5. Streamline operation of **cobrar** for Windows users
 
    Some biologists rely on Windows machines. To be able to be used by most users in the community,
    our tools have to be runnable on Windows machines.
@@ -152,10 +151,10 @@ approaches we used.
 
    In parallel, try a cross compilation using conda from Linux to Windows.
 
-6. Explore reference models in cobrar
+6. Explore reference models in **cobrar**
 
    Try to load, simulate and manipulate highly used models (*E. coli*, yeast-GEM, Human-GEM) using
-   cobrar (R console and R studio):
+   **cobrar** (R console and R studio):
    - Human-GEM (v1.19.0)
    - yeast-GEM (v9.0.2)
    - *E. coli* GEM
@@ -167,34 +166,34 @@ approaches we used.
 
    Discuss with Galaxy people present at the BioHackathon about how to integrate an (our) R tool in Galaxy.
 
-8. FROG implementation in cobrar
+8. FROG implementation in **cobrar**
 
-   Implement FBA, FVA, gene del and rxn del using cobrar.
+   Implement FBA, FVA, gene del and rxn del using **cobrar**.
 
    Get the results as [OMEX](https://doi.org/10.1186/s12859-014-0369-z) file, if possible, for a FROG integration.
 
 9. Test any changes / new models with GitHub actions
 
-   Test the CODEX AI code generation tool, to create cobrar pull requests.
+   Test the CODEX AI code generation tool, to create **cobrar** pull requests.
 
-   Those pull requests cover cobrar unit function tests, implemented as GitHub actions.
+   Those pull requests cover **cobrar** unit function tests, implemented as GitHub actions.
 
    Evaluate those CODEX pull requests to see if they make sense, and how to correct
    and integrate them.
 
-10. Gurobi solver in cobrar
+10. Gurobi solver in **cobrar**
 
-    cobrar uses the glpk solver, and provide a plugin for the CPLex solver.
+    **cobrar** uses the glpk solver, and provide a plugin for the CPLex solver.
 
     Evaluate how to add a plugin for the Gurobi solver.
 
 11. Incorporation in bio.tools
 
-    Discuss with the bio.tools people present at the BioHackathon to integrate cobrar in bio.tools.
+    Discuss with the bio.tools people present at the BioHackathon to integrate **cobrar** in bio.tools.
 
 12. Discussion about Bioconductor
 
-    Discuss with the Bioconductor people present at the BioHackathon to integrate cobrar in Bioconductor.
+    Discuss with the Bioconductor people present at the BioHackathon to integrate **cobrar** in Bioconductor.
 
 
 # Results
@@ -210,12 +209,12 @@ approaches we used.
    while, and some are dedicated to ODE models and not genome scale models.
 
    [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
-   maintained. We have then decided to rely on the cobrar code base, and to expand it. We have then started
-   a collaboration with the main cobrar developer, Silvio Waschina, from the Kiel University, Germany.
+   maintained. We have then decided to rely on the **cobrar** code base, and to expand it. We have then started
+   a collaboration with the main **cobrar** developer, Silvio Waschina, from the Kiel University, Germany.
 
-   cobrar is a re-coding of the Sybil library for model simulation, as we planned to do at the start of the project.
+   **cobrar** is a re-coding of the Sybil library for model simulation, as we planned to do at the start of the project.
 
-3. Understand the functionalities of cobrar
+3. Understand the functionalities of **cobrar**
 
    This first evaluation of **cobrar** allowed us to spot some lacking features and errors:
    - Exchange reactions functions did not work well
@@ -225,7 +224,7 @@ approaches we used.
 
    Silvio acted on pull requests and issues opened on the main **cobrar** repository.
 
-4. Understand the model structure in cobrar
+4. Understand the model structure in **cobrar**
 
    Starting from SBML, the model structure has been evaluated in **cobrar**.
 
@@ -234,7 +233,7 @@ approaches we used.
    On the long term, we wonder if an effort should be engaged to align/harmonize names of functions between different
    cobra toolboxes.
 
-5. Streamline operation of cobrar for Windows users
+5. Streamline operation of **cobrar** for Windows users
 
    Some people in the hacking team have tested available instructions to install and run **cobrar** on Windows.
 
@@ -245,7 +244,7 @@ approaches we used.
    The cross compilation using conda, from Linux to Windows, failed. The conda channels look too different between Linux
    and Windows to cross compile easily.
 
-6. Explore reference models in cobrar
+6. Explore reference models in **cobrar**
 
    The load of highly used models (*E. coli*, yeast-GEM, Human-GEM) of different size and complexity showed that
    **cobrar** can deal with models very efficiently. For example, the Human-GEM model, one of the largest with 13000
@@ -275,10 +274,10 @@ approaches we used.
    (source: https://www.bioconductor.org/packages//2.11/bioc/vignettes/RGalaxy/inst/doc/RGalaxy-vignette.pdf)
 
    There are two options for implementation in Galaxy:
-   - An interactive tool in this context is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed cobrar.
+   - An interactive tool in this context is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed **cobrar**.
    - Integration as tools: check CobraXy as it incorporates COBRApy for galaxy.
 
-8. FROG implementation in cobrar
+8. FROG implementation in **cobrar**
 
    FROG analysis is a community-driven initiative for standardizing reproducibility assessments of constraint-based and genome-scale metabolic models.
 
@@ -299,7 +298,7 @@ approaches we used.
 
    Few things have to be considered for further improvements:
    - OMEX archive export is currently not implemented.
-   - The metadata.json is missing the field for the sha256 checksum. This is because the R function `utils::sha256sum` was introduced in R quite recently, and it is not available for R versions < 4.5. Since we would like to make cobrar also available for the 'latest minus one' version of R, we decided to omit the sha256 checksum for now.
+   - The metadata.json is missing the field for the sha256 checksum. This is because the R function `utils::sha256sum` was introduced in R quite recently, and it is not available for R versions < 4.5. Since we would like to make **cobrar** also available for the 'latest minus one' version of R, we decided to omit the sha256 checksum for now.
    - The example in the function documentation is not perfect. A better example has to be found.
 
 9. Test any changes / new models with GitHub actions
@@ -314,7 +313,7 @@ approaches we used.
 
    All of them are now corrected and integrated in the **cobrar** distribution.
 
-10. Gurobi solver in cobrar
+10. Gurobi solver in **cobrar**
 
     Most people in the hacking team use [Gurobi](https://www.gurobi.com/) as solver, but it is not available in the **cobrar** distribution.
 
@@ -349,7 +348,7 @@ Silvio Waschina, from the Kiel University, Germany, joined remotely the project,
 # Outlook
 
 We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool because the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run. A wiki on the **cobrar** repository space should be deployed to share documents, ideas and feedbacks by the community.
-The hacking team is now engaged in a review writing and will continue to work together.
+The hacking team is now engaged in a review writing and will continue to collaborate.
 
 
 # Acknowledgements
