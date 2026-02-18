@@ -133,7 +133,7 @@ approaches we used.
 4. Understand the model structure in **cobrar**
 
    Get a full understanding of the information that is kept or discarded by **cobrar**, starting from
-   SBML [@citation:Keating2020], with R console and R studio:
+   a model in the SBML [@citation:Keating2020] format, with R console and R studio:
    - Which fields are stored?
    - Which fields are discarded?
    - Which fields are needed to be incorporated?
