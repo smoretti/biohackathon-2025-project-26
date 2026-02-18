@@ -174,7 +174,7 @@ approaches we used.
 
 9. Test any changes / new models with GitHub actions
 
-   Test the CODEX AI code generation tool, to create **cobrar** pull requests.
+   Test the [CODEX](https://openai.com/codex/) AI code generation tool, to create **cobrar** pull requests.
 
    Those pull requests cover **cobrar** unit function tests, implemented as GitHub actions.
 
