@@ -290,9 +290,9 @@ approaches we used.
    ```R
    library(cobrar)
 
-   frog("iML1515.xml.gz") # for an SBML file
-   # or for a "ModelOrg" object
-   mod <- readSBMLmod("iML1515.xml.gz")
+   frog("iML1515.xml.gz")                # for an SBML file
+   # or
+   mod <- readSBMLmod("iML1515.xml.gz")  # for a "ModelOrg" object
 
    frog(mod)
    ```
