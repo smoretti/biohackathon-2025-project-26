@@ -248,13 +248,13 @@ approaches we used.
 
    The load of highly used models (*E. coli*, yeast-GEM, Human-GEM) of different size and complexity showed that
    **cobrar** can deal with models very efficiently. For example, the Human-GEM model, one of the largest with 13000
-   reactions, was loaded in about 13 seconds.
+   reactions, is loaded in about 13 seconds.
 
    While loading and testing models, some issues were found:
-   - FBA says it optimizes successfully even if there is no objective function
+   - FBA returns a message saying it optimizes successfully even if there is no objective function.
    - *C. oleaginosus* model (included in the repository) is loaded and optimized successfully, but the reporting fails.
-     Identification of Exchange reactions is based on the name "EX_" this model does not follow this convention.
-   - If model file is not found, the `readSBMLmod` function makes R crash.
+     Identification of Exchange reactions is based on the name "*EX_*". This model does not follow this convention.
+   - If the model file is not found, the `readSBMLmod` function makes R crash.
 
    Those issues were documented, reported and are now solved.
 
