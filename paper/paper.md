@@ -124,10 +124,10 @@ approaches we used.
 
 3. Understand the functionalities of **cobrar**
 
-   This task is to understand the functionalities and capabilities of **cobrar**: understand the
+   Functionalities and capabilities of **cobrar**: understand the
    functions that are included and evaluate how do they relate to COBRApy.
 
-   And also to determine the minimal amount of additions needed to ensure basic functionality that
+   Determine the minimal amount of additions needed to ensure basic functionality that
    serves as a basis for future incorporation of model reconstruction algorithms/frameworks.
 
 4. Understand the model structure in **cobrar**
