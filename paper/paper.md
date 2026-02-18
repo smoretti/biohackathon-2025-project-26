@@ -149,7 +149,7 @@ approaches we used.
 
    Document our process for reproducing them and report any missing or custom steps.
 
-   In parallel, try a cross compilation using (conda)[https://conda.io] from Linux to Windows.
+   In parallel, try a cross compilation using [conda](https://conda.io) from Linux to Windows.
 
 6. Explore reference models in **cobrar**
 
