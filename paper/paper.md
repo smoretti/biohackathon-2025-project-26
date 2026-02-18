@@ -285,16 +285,15 @@ approaches we used.
 
    Implementation of the FROG analysis would make it easier for users to submit their models to the [BioModels](https://biomodels.org/) [@citation:Malik2020] repository.
 
-   FROG analysis has been implemented. It can be called either for an R model object `ModelOrg` or for a path pointing to an SBML file.
+   FROG analysis has been implemented in **cobrar**. It can be called either for an R model object `ModelOrg` or for a path pointing to an SBML file.
 
    ```R
    library(cobrar)
 
    frog("iML1515.xml.gz") # for an SBML file
-
    # or for a "ModelOrg" object
-
    mod <- readSBMLmod("iML1515.xml.gz")
+
    frog(mod)
    ```
 
