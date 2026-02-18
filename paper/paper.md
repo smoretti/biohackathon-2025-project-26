@@ -275,13 +275,13 @@ approaches we used.
 
    There are two options for implementation in Galaxy:
    - In this context, it is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools, ... A possibility is to set up an environment with pre-installed **cobrar**.
-   - Integration as tools: check CobraXy as it incorporates COBRApy for galaxy.
+   - Integration as tools: check COBRAxy [@citation:Lapi2025] as it incorporates COBRApy for galaxy.
 
 8. Implement FROG in **cobrar**
 
    FROG analysis is a community-driven initiative for standardizing reproducibility assessments of constraint-based and genome-scale metabolic models.
 
-   Implementation of the FROG analysis would make it easier for users to submit their models to the [BioModels](https://biomodels.net/) repository.
+   Implementation of the FROG analysis would make it easier for users to submit their models to the [BioModels](https://biomodels.org/) [@citation:Malik2020] repository.
 
    FROG analysis has been implemented. It can be called either for an R model object `ModelOrg` or for a path pointing to an SBML file.
 
