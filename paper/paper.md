@@ -82,9 +82,9 @@ biotechnology, microbiology and biomedicine. Constraint-based modeling provides 
 framework to analyze large-scale models and to associate genome potential and metabolic reactions.
 
 Currently, libraries to simulate these models are available in general-purpose languages such as
-Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/) `[@citesAsDataSource:Heirendt2019]`), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
-(Sybil 2013, unmaintained). There are also methods for model development and curation in Matlab
-([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2025) or Java (Merlin, KBase). However,
+Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/) `[@citation:Heirendt2019]`), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025 `[@citation:Ebrahim2013]`), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025 `[@citation:Kratochvíl2025]`) or R
+(Sybil 2013, unmaintained `[@citation:Gelius2013]`). There are also methods for model development and curation in Matlab
+([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/) `[@citation:Wang2018]`), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2025 `[@citation:Machado2018]`) or Java (Merlin `[@citation:Capela2022]`, KBase `[@citation:Arkin2018]`). However,
 currently there lacks an up-to-date R implementation of methods for model development and curation.
 
 In this project, we proposed the (re)development of an R based framework for developing and
@@ -94,8 +94,8 @@ toolbox in Matlab. The outcome will facilitate constraint based modelling to exp
 thereby contributing to bridge the gap between data users and data generators. It will also be
 more FAIR by being usable with non-proprietary software, and align with software best practices as
 collected by the [ELIXIR Tools Platform](https://elixir-europe.org/platforms/tools). We will work towards increased reproducibility by also
-considering implementation of [FROG analysis](https://doi.org/10.1101/2024.09.24.614797) in R. Moreover, as a tool developed by the [ELIXIR Systems
-Biology Community](https://elixir-europe.org/communities/systems-biology) for the wider community, the long-term maintenance burden is spread across a wider
+considering implementation of **FROG analysis** `[@citation:Karthik2024]` in R. Moreover, as a tool developed by the [ELIXIR Systems
+Biology Community](https://elixir-europe.org/communities/systems-biology) `[@citation:Martins2022]` for the wider community, the long-term maintenance burden is spread across a wider
 membership.
 
 Two weeks before the BioHackathon, we discovered a new tool in R allowing the simulation of models,
@@ -133,7 +133,7 @@ approaches we used.
 4. Understand the model structure in **cobrar**
 
    Get a full understanding of the information that is kept or discarded by **cobrar**, starting from
-   SBML, with R console and R studio:
+   SBML `[@citation:Keating2020]`, with R console and R studio:
    - Which fields are stored?
    - Which fields are discarded?
    - Which fields are needed to be incorporated?
@@ -170,7 +170,7 @@ approaches we used.
 
    Implement FBA, FVA, gene del and rxn del using **cobrar**.
 
-   Get the results as [OMEX](https://doi.org/10.1186/s12859-014-0369-z) file, if possible, for a FROG integration.
+   Get the results as **OMEX** `[@citation:Bergmann2014]` file, if possible, for a FROG integration.
 
 9. Test any changes / new models with GitHub actions
 
