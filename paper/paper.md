@@ -350,7 +350,7 @@ Silvio Waschina, from the Kiel University, Germany, joined remotely the project,
 
 # Outlook
 
-We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool because the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run. A wiki on the **cobrar** repository space should be deployed to share documents, ideas and feedbacks by the community.
+We will continue to help Silvio Waschina and his team for the development of the **cobrar** tool. We are convinced the Systems Biology community needs such a tool. Some people program only in R, and **cobrar** allows to avoid jumping between tools written in different programming languages, often complicated to install and run. A wiki on the **cobrar** repository space should be deployed to share documents, ideas and feedbacks by the community.
 The hacking team is now engaged in a review writing and will continue to collaborate.
 
 
