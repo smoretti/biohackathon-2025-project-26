@@ -261,9 +261,9 @@ approaches we used.
 7. Integrate in Galaxy
 
    After talking with Galaxy people present at the BioHackathon, we learnt that a function that you wish to expose in Galaxy has certain limitations:
-   - The function's arguments must include the names of its input and output files (function return values are ignored).
+   - The function arguments must include the names of its input and output files (function return values are ignored).
    - Any error conditions should be handled with stop with a useful/informative error message. The Galaxy user will see these messages if an error occurs.
-   - Functions which take datasets as input should accept as arguments the filenames pointing to those datasets. The Galaxy user interface will allow the user to choose the dataset graphically.
+   - Functions which take datasets as input should accept as arguments the filename(s) pointing to those datasets. The Galaxy user interface will allow the user to choose the dataset graphically.
    - Return values of functions are ignored. Function output should be written to one or more files, and the names of these files should be passed into the function as arguments.
    - Functions should be documented with a manual page. Galaxy will use this manual page to fill in relevant sections of the Galaxy XML file. The following sections of the man page are required:
       - alias
@@ -276,6 +276,8 @@ approaches we used.
    There are two options for implementation in Galaxy:
    - In this context, it is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools, ... A possibility is to set up an environment with pre-installed **cobrar**.
    - Integration as tools: check COBRAxy [@citation:Lapi2025] as it incorporates COBRApy for galaxy.
+
+   The integration in Galaxy has been postponed, due to lack of time during the BioHackathon, and will be done later.
 
 8. Implement FROG in **cobrar**
 
