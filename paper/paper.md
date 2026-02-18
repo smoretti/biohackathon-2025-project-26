@@ -274,7 +274,7 @@ approaches we used.
    (source: https://www.bioconductor.org/packages//2.11/bioc/vignettes/RGalaxy/inst/doc/RGalaxy-vignette.pdf)
 
    There are two options for implementation in Galaxy:
-   - In this context, it is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools whatever. A possibility is to set up an environment with pre-installed **cobrar**.
+   - In this context, it is perfectly possible to have an interactive R Studio or Jupyter notebook arranged from which to run scripts, tools, ... A possibility is to set up an environment with pre-installed **cobrar**.
    - Integration as tools: check CobraXy as it incorporates COBRApy for galaxy.
 
 8. Implement FROG in **cobrar**
