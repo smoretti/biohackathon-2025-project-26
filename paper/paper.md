@@ -183,7 +183,7 @@ approaches we used.
 
 10. Plug the Gurobi solver in **cobrar**
 
-    **cobrar** uses the glpk solver, and provide a plugin for the CPLex solver.
+    **cobrar** uses the GLPK solver, and provide a plugin for the CPLex solver.
 
     Evaluate how to add a plugin for the Gurobi solver.
 
@@ -331,7 +331,7 @@ approaches we used.
 
     After talking with Bioconductor people present at the BioHackathon, a Bioconductor looks complicated for Mac and Windows OS.
 
-    One point to keep in mind concerning portability to macOS is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has glpk and libSBML compiled for Apple Silicon Macs and these would be used if we would like to see **cobrar** in Bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
+    One point to keep in mind concerning portability to macOS is that brew has to be avoided. There are too many potential conflicts of binary interfaces. https://mac.r-project.org/bin/darwin20/arm64/ has GLPK and libSBML compiled for Apple Silicon Macs and these would be used if we would like to see **cobrar** in Bioconductor. An installation is possible, but people have to fiddle with Makevars a bit, and this is not for common people.
 
 
 # Discussion
