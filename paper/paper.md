@@ -312,7 +312,7 @@ approaches we used.
 
    Other tests fail because of possible **cobrar** issues.
 
-   All of them are now corrected and integrated in the **cobrar** distribution.
+   All of them are now corrected and integrated in the **cobrar** distribution, and run as GitHub actions.
 
 10. Plug-in the Gurobi solver in **cobrar**
 
