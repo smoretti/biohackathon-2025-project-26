@@ -82,7 +82,7 @@ biotechnology, microbiology and biomedicine. Constraint-based modeling provides 
 framework to analyze large-scale models and to associate genome potential and metabolic reactions.
 
 Currently, libraries to simulate these models are available in general-purpose languages such as
-Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/)), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
+Matlab ([COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable/) `[@citesAsDataSource:Heirendt2019]`), Python ([COBRApy](https://opencobra.github.io/cobrapy/) 2013, last release 2025), Julia ([COBREXA](https://github.com/COBREXA/COBREXA.jl) 2025) or R
 (Sybil 2013, unmaintained). There are also methods for model development and curation in Matlab
 ([RAVEN toolbox](https://sysbiochalmers.github.io/RAVEN/)), Python ([CarveMe](https://carveme.readthedocs.io/en/latest/) 2018, last release 2025) or Java (Merlin, KBase). However,
 currently there lacks an up-to-date R implementation of methods for model development and curation.
