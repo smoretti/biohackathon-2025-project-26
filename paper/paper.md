@@ -206,13 +206,13 @@ approaches we used.
 2. Evaluate existing tools
 
    Among the existing tools, some have very limited features (e.g. only load SBML files), some are not updated for a
-   while, and some are dedicated to ODE models and not genome scale models.
+   while, and some are dedicated to ODE models and not to genome scale models.
 
    [cobrar](https://github.com/Waschina/cobrar) looks to have several advantages and to be well
    maintained. We have then decided to rely on the **cobrar** code base, and to expand it. We have then started
    a collaboration with the main **cobrar** developer, Silvio Waschina, from the Kiel University, Germany.
 
-   **cobrar** is a re-coding of the Sybil library for model simulation, as we planned to do at the start of the project.
+   **cobrar** is a re-coding of the Sybil [@citation:Gelius2013] library for model simulation, as we planned to do at the start of the project.
 
 3. Understand the functionalities of **cobrar**
 
