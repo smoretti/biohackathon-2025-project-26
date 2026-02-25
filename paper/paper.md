@@ -33,6 +33,10 @@ authors:
     affiliation: 7
     orcid: 0000-0001-5845-146X
     role: BioHacker
+  - name: Silvio Waschina
+    affiliation: 8
+    orcid: 0000-0002-6290-3593
+    role: BioHacker
 affiliations:
   - name: Federal Polytechnic Ayede, Ayede, Ogbomosho, Oyo State, NG
     ror: 03ye8kt44
@@ -55,6 +59,9 @@ affiliations:
   - name: Wageningen University & Research, Laboratory of Systems and Synthetic Biology, NL
     ror: 04qw24q55
     index: 7
+  - name: Christian-Albrechts-University of Kiel, Nutriinformatics, DE
+    ror: 04v76ef78
+    index: 8
 date: 7 November 2025
 cito-bibliography: paper.bib
 event: BH25EU
