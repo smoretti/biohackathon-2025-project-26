@@ -44,8 +44,8 @@ affiliations:
   - name: ELIXIR Europe
     ror: 044rwnt51
     index: 2
-  - name: ???
-    ror: ???
+  - name: Chalmers University of Technology, Gothenburg, SE
+    ror: 040wg7k59
     index: 3
   - name: University of Helsinki, Computational Systems Medicine, FI
     ror: 040af2s02
